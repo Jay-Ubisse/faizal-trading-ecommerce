@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        'app-orange': '#fb8500',
+      },
     },
   },
   plugins: [require("daisyui")],
