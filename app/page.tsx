@@ -154,7 +154,7 @@ export default function Home() {
       >
         <div className="w-full h-full bg-black/60 pt-10">
           <Slide direction='up' delay={200} duration={1000}>
-            <h1 className='text-app-orange text-center font-bold text-3xl'>Compre por Categoria</h1>
+            <h1 className='text-app-orange text-center font-bold text-3xl'>Mais Vendidos</h1>
             <hr className='bg-app-orange h-2 rounded-3xl w-[50px] mx-auto mt-2 mb-8 border-none' />
           </Slide>
           <div className="flex justify-evenly">
