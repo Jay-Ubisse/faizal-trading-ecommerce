@@ -1,7 +1,7 @@
 'use client'
 
 import { Header } from "@/components/header";
-import { Truck } from "@phosphor-icons/react";
+import { Broadcast, SealCheck, Truck } from "@phosphor-icons/react";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
 import Image from "next/image"
@@ -44,14 +44,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-white flex items-center gap-6">
-                  <Truck weight="fill" size={52} />
+                  <SealCheck weight="fill" size={52} />
                   <div className="text-sm border-l border-app-orange pl-6 py-8">
                     <h4 className="font-semibold">Testado e Comprovado</h4>
                     <p className="font-normal">Os mais altos testes de qualidade</p>
                   </div>
                 </div>
                 <div className="text-white flex items-center gap-6">
-                  <Truck weight="fill" size={52} />
+                  <Broadcast weight="fill" size={52} />
                   <div className="text-sm border-l border-app-orange pl-6 py-8">
                     <h4 className="font-semibold">Atendimento ao Cliente</h4>
                     <p className="font-normal">Disponivel 24/7</p>
