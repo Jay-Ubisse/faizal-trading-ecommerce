@@ -3,7 +3,7 @@
 import { Header } from "@/components/header";
 import { Truck } from "@phosphor-icons/react";
 import Link from "next/link";
-import { Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import Image from "next/image"
 
 export default function Home() {
@@ -18,41 +18,47 @@ export default function Home() {
         <div className="w-full h-full pb-20 bg-black/50">
           <Header />
           <div className="w-fit mt-10 ml-20">
-            <h1 className="text-6xl mb-6 font-bold text-app-orange">
-              Construa o Carro <br />Dos Seus Sonhos Hoje.
-            </h1>
-            <h2 className="text-3xl mb-10 font-bold text-white">Agora São 15% de Desconto Em Todos os Items.</h2>
-            <div>
-              <Link
-                href={'/'}
-                className="text-white font-medium bg-app-orange px-6 py-3 border-2 border-app-orange rounded-3xl hover:bg-trasparent"
-              >
-                Comprar agora
-              </Link>
-            </div>
-            <section className="mt-28 flex gap-10">
-              <div className="text-white flex items-center gap-6">
-                <Truck weight="fill" size={52} />
-                <div className="text-sm border-l border-app-orange pl-6 py-8">
-                  <h4 className="font-semibold">Entregas grátis</h4>
-                  <p className="font-normal">Para pedidos acima de 1.000,00 MT</p>
-                </div>
+            <Fade cascade duration={2000}>
+              <h1 className="text-6xl mb-6 font-bold text-app-orange">
+                Construa o Carro <br />Dos Seus Sonhos Hoje.
+              </h1>
+              <h2 className="text-3xl mb-10 font-bold text-white">Agora São 15% de Desconto Em Todos os Items.</h2>
+            </Fade>
+            <Slide direction="down" delay={700}>
+              <div>
+                <Link
+                  href={'/'}
+                  className="text-white font-medium bg-app-orange px-6 py-3 border-2 border-app-orange rounded-3xl hover:bg-trasparent"
+                >
+                  Comprar agora
+                </Link>
               </div>
-              <div className="text-white flex items-center gap-6">
-                <Truck weight="fill" size={52} />
-                <div className="text-sm border-l border-app-orange pl-6 py-8">
-                  <h4 className="font-semibold">Testado e Comprovado</h4>
-                  <p className="font-normal">Os mais altos testes de qualidade</p>
+            </Slide>
+            <Slide direction="left" delay={800}>
+              <section className="mt-28 flex gap-10">
+                <div className="text-white flex items-center gap-6">
+                  <Truck weight="fill" size={52} />
+                  <div className="text-sm border-l border-app-orange pl-6 py-8">
+                    <h4 className="font-semibold">Entregas grátis</h4>
+                    <p className="font-normal">Para pedidos acima de 1.000,00 MT</p>
+                  </div>
                 </div>
-              </div>
-              <div className="text-white flex items-center gap-6">
-                <Truck weight="fill" size={52} />
-                <div className="text-sm border-l border-app-orange pl-6 py-8">
-                  <h4 className="font-semibold">Atendimento ao Cliente</h4>
-                  <p className="font-normal">Disponivel 24/7</p>
+                <div className="text-white flex items-center gap-6">
+                  <Truck weight="fill" size={52} />
+                  <div className="text-sm border-l border-app-orange pl-6 py-8">
+                    <h4 className="font-semibold">Testado e Comprovado</h4>
+                    <p className="font-normal">Os mais altos testes de qualidade</p>
+                  </div>
                 </div>
-              </div>
-            </section>
+                <div className="text-white flex items-center gap-6">
+                  <Truck weight="fill" size={52} />
+                  <div className="text-sm border-l border-app-orange pl-6 py-8">
+                    <h4 className="font-semibold">Atendimento ao Cliente</h4>
+                    <p className="font-normal">Disponivel 24/7</p>
+                  </div>
+                </div>
+              </section>
+            </Slide>
           </div>
         </div>
       </section>
