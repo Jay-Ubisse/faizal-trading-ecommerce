@@ -5,7 +5,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from 'next/navigation';
 
-export const Header = () => {
+import { cart } from "@/data/products-list";
+
+export const Header = ({ cartNumber }: { cartNumber: number }) => {
     const currentPath = usePathname();
 
     return (
@@ -32,9 +34,16 @@ export const Header = () => {
                             <UserCircle size={40} weight="fill" />
                             <p className="text-sm">Entrar</p>
                         </div>
-                        <div className="flex items-center hover:cursor-pointer hover:text-app-orange">
-                            <BagSimple size={40} />
-                            <p className="relative -left-6 mt-1">0</p>
+                        <div>
+                            <Link
+                                href={'/carrinha'}
+                                className="flex items-center hover:cursor-pointer hover:text-app-orange"
+                            >
+                                <BagSimple size={40} />
+                                <p className="relative -left-6 mt-1">
+                                    {cartNumber}
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </section>

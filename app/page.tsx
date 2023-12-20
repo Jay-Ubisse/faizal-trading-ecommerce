@@ -7,7 +7,19 @@ import { Fade, Slide } from "react-awesome-reveal";
 import Image from "next/image"
 import { Footer } from "@/components/footer";
 
+import { products } from "@/data/products-list";
+import { cart } from "@/data/products-list";
+import { useState } from "react";
+
+
 export default function Home() {
+  const [itemsNumber, setItemsNumber] = useState(0);
+
+  function addToCart(item: object) {
+    cart.push(item);
+    setItemsNumber(cart.length);
+  }
+
   return (
     <>
       <main>
@@ -18,7 +30,7 @@ export default function Home() {
           }}
         >
           <div className="w-full h-full pb-20 bg-black/50">
-            <Header />
+            <Header cartNumber={itemsNumber} />
             <div className="w-fit mt-10 ml-20">
               <Fade cascade duration={2000}>
                 <h1 className="text-6xl mb-6 font-bold text-app-orange">
@@ -175,6 +187,11 @@ export default function Home() {
                 <div className="card-body text-white">
                   <h2 className="card-title text-app-orange">Leitor de Musica</h2>
                   <p>1200 MT</p>
+                  <div className="border border-app-orange rounded-md w-fit mx-auto flex text-white my-4 overflow-hidden">
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">-</span>
+                    <span className="border-x font-medium border-app-orange px-8 py-2">3</span>
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">+</span>
+                  </div>
                   <div className="rating mb-5">
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
@@ -183,7 +200,11 @@ export default function Home() {
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
                   </div>
                   <div className="card-actions justify-center w-full">
-                    <button className="btn btn-outline hover:bg-app-orange outline-white text-white w-full">Adicionar a carrinha</button>
+                    <button
+                      onClick={() => addToCart(products[0])} 
+                      className="btn btn-outline hover:bg-app-orange outline-white text-white w-full">
+                        Adicionar a carrinha
+                      </button>
                   </div>
                 </div>
               </div>
