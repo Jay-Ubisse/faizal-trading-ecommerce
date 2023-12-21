@@ -223,6 +223,11 @@ export default function Home() {
                 <div className="card-body text-white">
                   <h2 className="card-title text-app-orange">Leitor de Musica</h2>
                   <p>1200 MT</p>
+                  <div className="border border-app-orange rounded-md w-fit mx-auto flex text-white my-4 overflow-hidden">
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">-</span>
+                    <span className="border-x font-medium border-app-orange px-8 py-2">1</span>
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">+</span>
+                  </div>
                   <div className="rating mb-5">
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
@@ -250,6 +255,11 @@ export default function Home() {
                 <div className="card-body text-white">
                   <h2 className="card-title text-app-orange">Leitor de Musica</h2>
                   <p>1200 MT</p>
+                  <div className="border border-app-orange rounded-md w-fit mx-auto flex text-white my-4 overflow-hidden">
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">-</span>
+                    <span className="border-x font-medium border-app-orange px-8 py-2">1</span>
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">+</span>
+                  </div>
                   <div className="rating mb-5">
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
@@ -277,6 +287,11 @@ export default function Home() {
                 <div className="card-body text-white">
                   <h2 className="card-title text-app-orange">Leitor de Musica</h2>
                   <p>1200 MT</p>
+                  <div className="border border-app-orange rounded-md w-fit mx-auto flex text-white my-4 overflow-hidden">
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">-</span>
+                    <span className="border-x font-medium border-app-orange px-8 py-2">1</span>
+                    <span className="p-2 px-4 font-medium bg-app-orange cursor-pointer">+</span>
+                  </div>
                   <div className="rating mb-5">
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
                     <input type="radio" name="rating-1" className="mask mask-star bg-white text-white" />
