@@ -12,7 +12,7 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
 
     return (
         <>
-            <header className="flex justify-between items-center px-5 py-5 w-[90%] mx-auto">
+            <header className="flex justify-between items-center px-5 py-5 w-[99%] mx-auto">
                 <h2 className="text-sm text-white font-medium">
                     Entregas grátis para pedidos acima de 1.000,00 MT
                 </h2>
