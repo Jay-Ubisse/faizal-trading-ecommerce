@@ -12,7 +12,7 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
 
     return (
         <>
-            <header className="flex justify-between items-center px-5 py-5 border-b-2 border-white w-[90%] mx-auto">
+            <header className="flex justify-between items-center px-5 py-5 w-[90%] mx-auto">
                 <h2 className="text-sm text-white font-medium">
                     Entregas grátis para pedidos acima de 1.000,00 MT
                 </h2>
@@ -48,7 +48,7 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
                     </div>
                 </section>
             </header>
-            <section className="flex justify-between items-center px-5 pr-20 text-white">
+            <section className="flex justify-between items-center px-5 pr-20 text-white bg-gradient-to-r from-orange-200 to-orange-600">
                 <div>
                     <Image
                         src={'/img/logo-white.png'}
@@ -63,7 +63,7 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
                 <nav className="flex gap-5">
                     <Link
                         href={'/'}
-                        className={currentPath == "/" ? "text-app-orange border-b border-app-orange pb-1" : "text-white hover:text-app-orange hover:border-b hover:border-app-orange"}
+                        className={currentPath == "/" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-wr:text-app-orange hover:border-b hover:border-app-orange"}
                     >
                         Início
                     </Link>
