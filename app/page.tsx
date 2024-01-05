@@ -10,6 +10,7 @@ import { Footer } from "@/components/footer";
 import { products } from "@/data/products-list";
 import { cart } from "@/data/products-list";
 import { useState } from "react";
+import { WhatsappButton } from "@/components/WhatsappButton";
 
 
 export default function Home() {
@@ -361,6 +362,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <WhatsappButton />
     </>
   )
 }

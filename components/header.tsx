@@ -5,8 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from 'next/navigation';
 
-import { cart } from "@/data/products-list";
-
 export const Header = ({ cartNumber }: { cartNumber: number }) => {
     const currentPath = usePathname();
 
@@ -36,7 +34,7 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
                         </div>
                         <div>
                             <Link
-                                href={'/carrinha'}
+                                href={'/cart'}
                                 className="flex items-center hover:cursor-pointer hover:text-app-orange"
                             >
                                 <BagSimple size={40} />
@@ -63,31 +61,31 @@ export const Header = ({ cartNumber }: { cartNumber: number }) => {
                 <nav className="flex gap-5">
                     <Link
                         href={'/'}
-                        className={currentPath == "/" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-wr:text-app-orange hover:border-b hover:border-app-orange"}
+                        className={currentPath == "/" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-white hover:border-b hover:text-orange-900 hover:border-orange-900 hover:pb-1"}
                     >
                         Início
                     </Link>
                     <Link
-                        href={'/'}
-                        className={currentPath == "/acessorios" ? "text-app-orange border-b border-app-orange pb-1" : "text-white hover:text-app-orange hover:border-b hover:border-app-orange"}
+                        href={'/store'}
+                        className={currentPath == "/store" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-white hover:border-b hover:text-orange-900 hover:border-orange-900 hover:pb-1"}
                     >
                         Loja
                     </Link>
                     <Link
                         href={'/'}
-                        className={currentPath == "/premium" ? "text-app-orange border-b border-app-orange pb-1" : "text-white hover:text-app-orange hover:border-b hover:border-app-orange"}
+                        className={currentPath == "/premium-area" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-white hover:border-b hover:text-orange-900 hover:border-orange-900 hover:pb-1"}
                     >
                         Área Premium
                     </Link>
                     <Link
                         href={'/'}
-                        className={currentPath == "/contacto" ? "text-app-orange border-b border-app-orange pb-1" : "text-white hover:text-app-orange hover:border-b hover:border-app-orange"}
+                        className={currentPath == "/contact" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-white hover:border-b hover:text-orange-900 hover:border-orange-900 hover:pb-1"}
                     >
                         Contacto
                     </Link>
                     <Link
                         href={'/'}
-                        className={currentPath == "/faq" ? "text-app-orange border-b border-app-orange pb-1" : "text-white hover:text-app-orange hover:border-b hover:border-app-orange"}
+                        className={currentPath == "/faq" ? "text-orange-900 border-b border-orange-900 pb-1" : "text-white hover:border-b hover:text-orange-900 hover:border-orange-900 hover:pb-1"}
                     >
                         FAQ
                     </Link>
